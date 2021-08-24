@@ -1,0 +1,93 @@
+﻿@model MainMusicStore.Models.DbModels.Product
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<br />
+<br />
+<br />
+<br />
+<div class="row u-pt20 border">
+    <div class="col-md-5 col-sm-12 col-xs-12 product-photos">
+        <div class="product-photos__showcase slick-initialized slick-slider">
+            <div aria-live="polite" class="slick-list draggable">
+                <div class="slick-track" style="opacity: 1; width: 456px; transform: translate3d(0px, 0px, 0px);" role="listbox">
+                    <a href="https://www.do-re.com.tr/pearl-river-up115m5-akustik-duvar-piyanosu-maun-c68fba03f21bd89ea9186a63823d19cf-b18ee24e621f90696ef20ddc58694e9e-max-pp.jpg" data-lightbox="main" data-title="Pearl River UP115M5 Akustik Duvar Piyanosu (Maun)<br>Fotoğraf: 1/1" class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 456px;" tabindex="-1" role="option" aria-describedby="slick-slide10">
+                        <div>
+                            <img src="@Model.ImageUrl" class="card-img-top" />
+                            
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-7 col-sm-12 col-xs-12 product-detail__info border">
+        <h1 class="border">&nbsp;@Model.title</h1>
+        <div class="info-value u-pt30">
+            <br />
+            <span class="font-weight-bold">&nbsp;Ürün Kodu: </span>  <span>&nbsp; @Model.ProductNo</span>
+        </div>
+        <br />
+        <div class="info-value">
+            <span class="font-weight-bold">&nbsp;Marka: </span>  <span>&nbsp; @Model.Brand.Name</span>
+        </div>
+        <br />
+        <div class="row u-pt20">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <h5 class="font-weight-bold">&nbsp;Liste Fiyatı: <b style="color:red" class="">&nbsp;<strike> @Model.ListPrice.ToString("0.00") &nbsp;TL</strike> </b></h5>
+                <br /> 
+                <a asp-action="Index" class="btn btn-success">Ürünlere Geri Dön</a>
+                <br>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 u-center">
+
+                <h4 class="font-weight-bold">&nbsp;Satış Fiyatı: <b style="color:forestgreen" class="">&nbsp; @Model.Price.ToString("0.00")  &nbsp;TL</b></h4>
+                <br />
+                
+                <a style="background-color:darkorange" href="" onclick="" class="btn text-white btn-lg">SEPETE EKLE</a>
+            </div>
+        </div>
+        <br />
+        <div class="row product-detail-warranty border">
+
+            &nbsp;&nbsp; <h5 class="font-weight-bold">&nbsp;&nbsp;Ürün Açıklaması </h5>
+            <br /><br />
+            <div>
+                <p>@Html.Raw(Model.Description)</p>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+@*<div class="row pb-3 backgroundWhite">
+        <div class="col-lg-3 col-md-6">
+            <div class="row p-2">
+                <div class="col-12  p-1" style="border:1px solid #008cba; border-radius: 5px;">
+                    <div class="card" style="border:0px;">
+                        <img src="@Model.ImageUrl" class="card-img-top rounded" />
+                        <div class="pl-1">
+                            <p class="card-title h5"><b style="color:#2c3e50">@Model.title</b></p>
+                            <p class="card-title text-primary">by <b>@Model.Brand.Name</b></p>
+                        </div>
+                        <div style="padding-left:5px;">
+                            <p>List Price: <strike><b class="">$ @Model.ListPrice.ToString("0.00")</b></strike></p>
+                        </div>
+                        <div style="padding-left:5px;">
+                            <p style="color:maroon">As low as: <b class="">$ @Model.Price.ToString("0.00")</b></p>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="btn btn-success form-control" asp-route-id="@Model.Id">ADD TO CART</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+

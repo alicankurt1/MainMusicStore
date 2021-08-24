@@ -1,0 +1,15 @@
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\bin\Debug\netcoreapp3.1\MainMusicStore.DataAccess.deps.json
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\bin\Debug\netcoreapp3.1\MainMusicStore.DataAccess.dll
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\obj\Debug\netcoreapp3.1\MainMusicStore.DataAccess.csprojAssemblyReference.cache
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\obj\Debug\netcoreapp3.1\MainMusicStore.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\obj\Debug\netcoreapp3.1\MainMusicStore.DataAccess.AssemblyInfo.cs
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\bin\Debug\netcoreapp3.1\MainMusicStore.DataAccess.pdb
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\obj\Debug\netcoreapp3.1\MainMusicStore.DataAccess.dll
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\obj\Debug\netcoreapp3.1\MainMusicStore.DataAccess.pdb
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\bin\Debug\netcoreapp3.1\MainMusicStore.Models.dll
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\bin\Debug\netcoreapp3.1\MainMusicStore.Models.pdb
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\obj\Debug\netcoreapp3.1\MainMusicStore.DataAccess.csproj.CopyComplete
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\bin\Debug\netcoreapp3.1\MainMusicStore.DataAccess.runtimeconfig.json
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\bin\Debug\netcoreapp3.1\MainMusicStore.DataAccess.runtimeconfig.dev.json
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\obj\Debug\netcoreapp3.1\MainMusicStore.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Alican\Desktop\MainMusicStore\MainMusicStore.DataAccess\obj\Debug\netcoreapp3.1\MainMusicStore.DataAccess.genruntimeconfig.cache

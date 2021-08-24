@@ -1,0 +1,139 @@
+﻿@model MainMusicStore.Models.ViewModels.ProductVM
+@{ ViewData["Title"] = "Upsert";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+                var title = "Ürün Ekle"; }
+
+<form method="post" enctype="multipart/form-data">
+    <div class="row p-3 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if (Model.product.Id != 0)
+        {
+            //edit
+            title = "Ürün Güncelle";
+            <input type="hidden" asp-for="product.Id"/>
+        }
+        <div class="col-12 border-bottom">
+            <h2 class="text-primary">@title</h2>
+        </div>
+        <div class="col-8 pt-4">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label>Ürün Adı</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="product.title" class="form-control" />
+                    <span asp-validation-for="product.title" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label>Ürün Kodu</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="product.ProductNo" class="form-control" />
+                    <span asp-validation-for="product.ProductNo" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label>Liste Fiyatı</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="product.ListPrice" class="form-control" />
+                    <span asp-validation-for="product.ListPrice" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label>Fiyat</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="product.Price" class="form-control" />
+                    <span asp-validation-for="product.Price" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    Kategori
+                </div>
+                <div class="col-8">
+                    @Html.DropDownListFor(m => m.product.CategoryId, Model.CategoryList, "-Select a Category", new { @class = "form-control" })
+                    <span asp-validation-for="product.CategoryId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    Marka
+                </div>
+                <div class="col-8">
+                    @Html.DropDownListFor(m => m.product.BrandId, Model.BrandList, "-Select a Brand", new { @class = "form-control" })
+                    <span asp-validation-for="product.BrandId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label> Ürün Açıklaması </label>
+                </div>
+                <div class="col-8">
+                    <textarea asp-for="product.Description" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    Ürün Resmi
+                </div>
+                <div class="col-8">  
+                    <input type="file" name="files" id="uploadBox" multiple class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    @if (Model.product.Id != 0)
+                    {
+        <partial name="_EditAndBackToListButton" model="Model.product.Id" /> }
+    else
+    {
+        <div class="row">
+            <div class="col">
+                <button type="submit" onclick="return validateInput()" class="btn btn-primary form-control">Ekle</button>
+            </div>
+            <div class="col">
+                <a asp-action="Index" class="btn btn-success form-control"> Listeye Geri Dön</a>
+            </div>
+        </div>}
+                </div>
+            </div>
+        </div>
+        @if (Model.product.Id != 0)
+        {
+            <div class="col-3 offset-1 pt-4">
+                <img src="@Model.product.ImageUrl" width="100%" style="border-radius:3px; border: 1px; " />
+            </div>
+        }
+
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+    <script src="https://cdn.tiny.cloud/1/j4a016jsnum7dmetf652xd46a1fgjddrelconvze632ssfzu/tinymce/5/tinymce.min.js" referrerpolicy="origin">
+    </script>
+
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        plugins: 'lists',
+        menubar: 'file edit format'
+    });
+
+    function validateInput() {
+        if (document.getElementById("uploadBox").value == "") {
+            swal("Error", "Lütfen bir resim seçin!", "error");
+            return false;
+        }
+    }
+
+</script>
+}
+
